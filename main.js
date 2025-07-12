@@ -64,7 +64,7 @@ function animateMoves(solution, delay = 500) {
         const toX = pegDist * (to + 0.5);
 
         const fromY = canvasHeight - (rows[from].length + 1) * (height + margin);
-        const toY = canvasHeight - (rows[to].length + 1) * (height + margin);
+        const toY = canvasHeight - (rows[to].length + 2) * (height + margin);
 
         activeAnimation = {
             disk,
@@ -127,7 +127,6 @@ function animateMoves(solution, delay = 500) {
 
         timeoutId = setTimeout(stepAnimation, frameInterval); // Simulate animation frame
     }
-
     startNextMove();
 }
 
